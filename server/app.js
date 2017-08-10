@@ -8,6 +8,7 @@ const expressValidator = require("express-validator");
 const morgan = require("morgan");
 const session = require("express-session");
 mongoose.Promise = require("bluebird");
+const sequelize = require('sequelize');
 
 const app = express();
 
