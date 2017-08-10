@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
+        models.user.hasMany(models.gab)
         // associations can be defined here
         /** messages need to be associated to the user who created them **/
       }

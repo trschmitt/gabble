@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: function(queryInterface, Sequelize) {
-    return queryInterface.createTable('messages', {
+    return queryInterface.createTable('gabs', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -9,7 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references: {
+          model: "users",
+          key: "id"
+        }
       },
       message: {
         type: Sequelize.TEXT
