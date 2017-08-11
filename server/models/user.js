@@ -25,9 +25,8 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        models.user.hasMany(models.message)
-        // associations can be defined here
-        /** messages need to be associated to the user who created them **/
+        models.user.hasMany(models.gab);
+        models.user.hasMany(models.like);
       }
     }
   });

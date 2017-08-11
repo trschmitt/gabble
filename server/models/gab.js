@@ -1,14 +1,13 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  const message = sequelize.define('message', {
+  const message = sequelize.define('gab', {
     user_id: DataTypes.INTEGER,
     message: DataTypes.TEXT
   }, {
     classMethods: {
       associate: function(models) {
-
-        // associations can be defined here
-        /** messages need to be associated to the user who created them **/
+        models.gab.belongsTo(models.user)
+        models.gab.hasMany(models.like)
       }
     }
   });
