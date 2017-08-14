@@ -10,17 +10,9 @@ module.exports = {
       },
       user_id: {
         type: Sequelize.INTEGER
-        references: {
-          model: "user",
-          key: "id"
-        }
       },
       gab_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "gab",
-          key: "id"
-        }
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,

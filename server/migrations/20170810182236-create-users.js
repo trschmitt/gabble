@@ -10,8 +10,8 @@ module.exports = {
       },
       username: {
         allowNull: false,
-        unique: true
-        type: Sequelize.STRING,
+        unique: true,
+        type: Sequelize.STRING
       },
       first_name: {
         type: Sequelize.STRING
@@ -23,9 +23,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       password: {
-        allowNull: false
-        type: Sequelize.STRING,
-      }
+        allowNull: false,
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

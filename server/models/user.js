@@ -14,7 +14,7 @@ module.exports = function(sequelize, DataTypes) {
     email: DataTypes.STRING,
     password: {
       type: string,
-      allowNull: false
+      allowNull: false,
       set(password){
         const saltRounds = 5;
         let salt = bcrypt.genSaltSync(saltRounds);
@@ -32,3 +32,5 @@ module.exports = function(sequelize, DataTypes) {
   });
   return todo;
 };
+
+//create new JS file to get a hashed password for my seeded data
